@@ -1,4 +1,4 @@
-import { Heading } from "@chakra-ui/react";
+import { Center, Heading } from "@chakra-ui/react";
 import * as React from "react";
 import { TodoListContext } from "../context/TodoListContext";
 import PrimaryButton from "../components/Button";
@@ -37,18 +37,20 @@ const TodoForm = () => {
       <Heading as="h1" m={10} textAlign="center">
         AffordMed Todo
       </Heading>
-      <form onSubmit={handleSubmit}>
-        <PrimaryInput
-          value={title}
-          w="auto"
-          placeholder="enter your todo"
-          onChange={handleChange}
-        />
-        <>
-          <PrimaryButton name="Add" type="submit" />
-          <PrimaryButton name="Clear" onClick={clearList} />
-        </>
-      </form>
+      <Center>
+        <form onSubmit={handleSubmit}>
+          <PrimaryInput
+            value={title}
+            w="auto"
+            placeholder="enter your todo"
+            onChange={handleChange}
+          />
+          <>
+            <PrimaryButton name="Add" type="submit" />
+            <PrimaryButton name="Clear" onClick={clearList} />
+          </>
+        </form>
+      </Center>
     </>
   );
 };

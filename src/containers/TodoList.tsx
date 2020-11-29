@@ -1,3 +1,4 @@
+import { Center } from "@chakra-ui/react";
 import * as React from "react";
 import { TodoListContext } from "../context/TodoListContext";
 import Todo from "./Todo";
@@ -6,7 +7,7 @@ const TodoList: React.FC = () => {
   const { todos } = React.useContext(TodoListContext);
 
   return (
-    <>
+    <Center>
       {todos.length ? (
         <ul>
           {todos.map((todo) => {
@@ -16,7 +17,7 @@ const TodoList: React.FC = () => {
       ) : (
         <div>No tasks</div>
       )}
-    </>
+    </Center>
   );
 };
 
