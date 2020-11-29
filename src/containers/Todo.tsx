@@ -16,7 +16,7 @@ const Todo = ({ todo }) => {
   };
 
   return (
-    <li style={{ listStyle: "none" }} className="flex">
+    <li className="flex list-none">
       <span className="m-5 cursor-pointer" onClick={handleTodoComplete}>
         {todo.active ? <span>✔</span> : <span>○</span>}
       </span>

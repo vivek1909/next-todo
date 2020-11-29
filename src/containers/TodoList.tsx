@@ -7,7 +7,7 @@ const TodoList: React.FC = () => {
   const { todos } = React.useContext(TodoListContext);
 
   return (
-    <Center>
+    <Center className="m-10 flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 shadow-2xl">
       {todos.length ? (
         <ul>
           {todos.map((todo) => {

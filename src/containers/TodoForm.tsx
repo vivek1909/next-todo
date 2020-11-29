@@ -46,8 +46,12 @@ const TodoForm = () => {
             onChange={handleChange}
           />
           <>
-            <PrimaryButton name="Add" type="submit" />
-            <PrimaryButton name="Clear" onClick={clearList} />
+            <PrimaryButton name="Add" type="submit" background="#089eca" />
+            <PrimaryButton
+              name="Clear"
+              onClick={clearList}
+              background="tomato"
+            />
           </>
         </form>
       </Center>
