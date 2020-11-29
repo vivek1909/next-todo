@@ -1,5 +1,10 @@
 import * as React from "react";
-import { DeleteIcon, EditIcon } from "@chakra-ui/icons";
+import {
+  DeleteIcon,
+  EditIcon,
+  CheckCircleIcon,
+  CheckIcon,
+} from "@chakra-ui/icons";
 import { TodoListContext } from "../context/TodoListContext";
 
 const Todo = ({ todo }) => {
@@ -18,7 +23,7 @@ const Todo = ({ todo }) => {
   return (
     <li className="flex list-none">
       <span className="m-5 cursor-pointer" onClick={handleTodoComplete}>
-        {todo.active ? <span>✔</span> : <span>○</span>}
+        {todo.active ? <CheckCircleIcon /> : <span>○</span>}
       </span>
       <span className="m-5">{todo.title}</span>
       <DeleteIcon onClick={handleDelete} className="m-5 cursor-pointer" />
