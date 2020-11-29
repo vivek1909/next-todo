@@ -1,6 +1,6 @@
 import { Input, InputProps } from "@chakra-ui/react";
 
-const PrimaryInput = (props: InputProps) => {
+export const PrimaryInput = (props: InputProps) => {
   return (
     <Input
       w={props.w}
@@ -12,5 +12,3 @@ const PrimaryInput = (props: InputProps) => {
     />
   );
 };
-
-export default PrimaryInput;

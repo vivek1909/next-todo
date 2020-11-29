@@ -1,13 +1,8 @@
 import * as React from "react";
-import {
-  DeleteIcon,
-  EditIcon,
-  CheckCircleIcon,
-  CheckIcon,
-} from "@chakra-ui/icons";
+import { DeleteIcon, EditIcon, CheckCircleIcon } from "@chakra-ui/icons";
 import { TodoListContext } from "../context/TodoListContext";
 
-const Todo = ({ todo }) => {
+export const Todo = ({ todo }) => {
   const { removeTodo, findItem, todoComplete } = React.useContext(
     TodoListContext
   );
@@ -34,5 +29,3 @@ const Todo = ({ todo }) => {
     </li>
   );
 };
-
-export default Todo;

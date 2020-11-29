@@ -1,6 +1,6 @@
 import { Button, ButtonProps } from "@chakra-ui/react";
 
-const PrimaryButton = (props: ButtonProps) => {
+export const PrimaryButton = (props: ButtonProps) => {
   return (
     <Button
       m={2}
@@ -12,5 +12,3 @@ const PrimaryButton = (props: ButtonProps) => {
     </Button>
   );
 };
-
-export default PrimaryButton;

@@ -1,10 +1,10 @@
 import { Center, Heading } from "@chakra-ui/react";
 import * as React from "react";
 import { TodoListContext } from "../context/TodoListContext";
-import PrimaryButton from "../components/Button";
-import PrimaryInput from "../components/Input";
+import { PrimaryButton } from "../components/Button";
+import { PrimaryInput } from "../components/Input";
 
-const TodoForm = () => {
+export const TodoForm = () => {
   const { addTodo, clearList, editTodo, editItem } = React.useContext(
     TodoListContext
   );
@@ -58,5 +58,3 @@ const TodoForm = () => {
     </>
   );
 };
-
-export default TodoForm;

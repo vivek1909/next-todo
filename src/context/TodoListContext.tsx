@@ -8,7 +8,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const TodoListContextProvider = (props: Props) => {
+export const TodoListContextProvider = (props: Props) => {
   const [todos, setTodos] = React.useState([]);
   const [editItem, setEditItem] = React.useState(null);
 
@@ -64,5 +64,3 @@ const TodoListContextProvider = (props: Props) => {
     </TodoListContext.Provider>
   );
 };
-
-export default TodoListContextProvider;

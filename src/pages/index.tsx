@@ -1,6 +1,6 @@
-import TodoListContextProvider from "../context/TodoListContext";
-import TodoList from "../containers/TodoList";
-import TodoForm from "../containers/TodoForm";
+import { TodoListContextProvider } from "../context/TodoListContext";
+import { TodoList } from "../containers/TodoList";
+import { TodoForm } from "../containers/TodoForm";
 
 const HomePage = () => {
   return (

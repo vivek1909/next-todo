@@ -1,9 +1,9 @@
 import { Center } from "@chakra-ui/react";
 import * as React from "react";
 import { TodoListContext } from "../context/TodoListContext";
-import Todo from "./Todo";
+import { Todo } from "./Todo";
 
-const TodoList: React.FC = () => {
+export const TodoList: React.FC = () => {
   const { todos } = React.useContext(TodoListContext);
 
   return (
@@ -20,5 +20,3 @@ const TodoList: React.FC = () => {
     </Center>
   );
 };
-
-export default TodoList;
