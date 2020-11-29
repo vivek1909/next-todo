@@ -11,6 +11,6 @@ export interface IContextModel {
   clearList: () => void;
   findItem: (id: string) => void;
   editTodo: (title: string, id: string) => void;
-  editItem: any;
+  editItem: ITodo;
   todoComplete: (id: string) => void;
 }
