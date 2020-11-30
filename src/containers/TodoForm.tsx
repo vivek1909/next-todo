@@ -1,8 +1,8 @@
-import { Center, Heading } from "@chakra-ui/react";
 import * as React from "react";
+import { Center, Heading } from "@chakra-ui/react";
 import { TodoListContext } from "../context/TodoListContext";
-import { PrimaryButton } from "../components/Button";
-import { PrimaryInput } from "../components/Input";
+import { PrimaryButton } from "../components/PrimaryButton";
+import { PrimaryInput } from "../components/PrimaryInput";
 
 export const TodoForm = () => {
   const { addTodo, clearList, editTodo, editItem } = React.useContext(
@@ -46,12 +46,8 @@ export const TodoForm = () => {
             onChange={handleChange}
           />
           <>
-            <PrimaryButton name="Add" type="submit" background="#089eca" />
-            <PrimaryButton
-              name="Clear"
-              onClick={clearList}
-              background="tomato"
-            />
+            <PrimaryButton name="Add" type="submit" className="bg-blue-500" />
+            <PrimaryButton name="Clear" onClick={clearList} />
           </>
         </form>
       </Center>

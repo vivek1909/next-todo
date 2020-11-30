@@ -1,6 +1,6 @@
 import * as React from "react";
 import { v4 as uuid } from "uuid";
-import { IContextModel } from "../interface";
+import { IContextModel } from "../types";
 
 export const TodoListContext = React.createContext({} as IContextModel);
 
@@ -8,12 +8,19 @@ interface Props {
   children: React.ReactNode;
 }
 
-export const TodoListContextProvider = (props: Props) => {
+export const TodoListContextProvider = ({ children }: Props) => {
   const [todos, setTodos] = React.useState([]);
   const [editItem, setEditItem] = React.useState(null);
 
-  const addTodo = (title: string): void => {
-    setTodos([...todos, { title, id: uuid(), active: false }]);
+  const addTodo = (title: string): string => {
+    const todo = {
+      title,
+      id: uuid(),
+      active: false,
+    };
+    setTodos([...todos, todo]);
+
+    return todo.id;
   };
 
   const removeTodo = (id: string): void => {
@@ -60,7 +67,7 @@ export const TodoListContextProvider = (props: Props) => {
         todoComplete,
       }}
     >
-      {props.children}
+      {children}
     </TodoListContext.Provider>
   );
 };
