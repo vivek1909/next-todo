@@ -41,13 +41,12 @@ export const TodoForm = () => {
         <form onSubmit={handleSubmit}>
           <PrimaryInput
             value={title}
-            w="auto"
             placeholder="enter your todo"
             onChange={handleChange}
           />
           <>
-            <PrimaryButton name="Add" type="submit" className="bg-blue-500" />
-            <PrimaryButton name="Clear" onClick={clearList} />
+            <PrimaryButton type="submit">Add</PrimaryButton>
+            <PrimaryButton onClick={clearList}>Clear</PrimaryButton>
           </>
         </form>
       </Center>

@@ -47,11 +47,14 @@ export const TodoListContextProvider = ({ children }: Props) => {
   };
 
   const todoComplete = (id: string): void => {
-    const newTodos = [...todos];
-    newTodos.find((todo) => todo.id === id)!.active = !newTodos.find(
-      (todo) => todo.id === id
-    ).active;
-    setTodos(newTodos);
+    const updateTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        todo.active = !todo.active;
+      }
+      return todo;
+    });
+
+    setTodos(updateTodos);
   };
 
   return (

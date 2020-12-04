@@ -1,12 +1,22 @@
-export const PrimaryInput = ({ value, placeholder, onChange }) => {
+import { InputProps, Input } from "@chakra-ui/react";
+
+export const PrimaryInput = ({
+  value,
+  placeholder,
+  className,
+  onChange,
+  ...props
+}: InputProps) => {
   return (
-    <input
-      className="bg-transparent p-2 m-2"
+    <Input
+      className={"bg-transparent p-2 m-2 " + className}
       type="text"
+      data-testid="primary-input"
       value={value}
       placeholder={placeholder}
       onChange={onChange}
       required
+      {...props}
     />
   );
 };
