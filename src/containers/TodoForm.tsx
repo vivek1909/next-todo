@@ -41,6 +41,7 @@ export const TodoForm = () => {
         <form onSubmit={handleSubmit}>
           <PrimaryInput
             value={title}
+            name="input"
             placeholder="enter your todo"
             onChange={handleChange}
           />

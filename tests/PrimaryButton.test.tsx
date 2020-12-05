@@ -1,6 +1,8 @@
 import * as React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, cleanup } from "@testing-library/react";
 import { PrimaryButton } from "../src/components/PrimaryButton";
+
+afterEach(cleanup);
 
 describe("<PrimaryButton />", () => {
   it("renders the correct content", () => {

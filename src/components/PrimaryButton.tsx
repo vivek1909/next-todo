@@ -2,7 +2,7 @@ import { ButtonProps, Button } from "@chakra-ui/react";
 
 interface Props extends ButtonProps {
   chidren?: string;
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const PrimaryButton = ({

@@ -1,6 +1,8 @@
 import * as React from "react";
-import { fireEvent, getByText, render } from "@testing-library/react";
+import { cleanup, fireEvent, render } from "@testing-library/react";
 import { PrimaryInput } from "../src/components/PrimaryInput";
+
+afterEach(cleanup);
 
 describe("<PrimaryInput />", () => {
   it("should render the current input content", () => {

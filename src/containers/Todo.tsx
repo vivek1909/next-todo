@@ -16,11 +16,13 @@ export const Todo = ({ todo }) => {
   };
 
   return (
-    <li className="flex list-none">
+    <li className="flex list-none" data-testid="todo">
       <span className="m-5 cursor-pointer" onClick={handleTodoComplete}>
         {todo.active ? <CheckCircleIcon /> : <span>○</span>}
       </span>
-      <span className="m-5">{todo.title}</span>
+      <span className="m-5" data-testid="title">
+        {todo.title}
+      </span>
       <DeleteIcon onClick={handleDelete} className="m-5 cursor-pointer" />
       <EditIcon
         onClick={() => findItem(todo.id)}
